@@ -1,28 +1,100 @@
-// Copyright 2020 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+"use strict";
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+/////////////  Menu Toggle ///////////////////
+function menuToggle(){
+  var nav = document.getElementById('menu-overlay');
+  nav.classList.toggle('active');
+  
+  var nav = document.getElementById('toggleIcon');
+  nav.classList.toggle('active');
 }
+
+/////////////  Typing Animation ///////////////////
+
+
+// List of sentences
+var _CONTENT = [ "I'm a web developer", "I'm a coding instructor", "I'm a curriculum engineer"];
+
+// Current sentence being processed
+var _PART = 0;
+
+// Character number of the current sentence being processed 
+var _PART_INDEX = 0;
+
+// Holds the handle returned from setInterval
+var _INTERVAL_VAL;
+
+// Element that holds the text
+var _ELEMENT = document.querySelector("#type-text");
+
+// Implements typing effect
+function Type() { 
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX++;
+
+	// If full sentence has been displayed then start to delete the sentence after some time
+	if(text === _CONTENT[_PART]) {
+		clearInterval(_INTERVAL_VAL);
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Delete, 50);
+		}, 1000);
+	}
+}
+
+// Implements deleting effect
+function Delete() {
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX--;
+
+	// If sentence has been deleted then start to display the next sentence
+	if(text === '') {
+		clearInterval(_INTERVAL_VAL);
+
+		// If last sentence then display the first one, else move to the next
+		if(_PART == (_CONTENT.length - 1))
+			_PART = 0;
+		else
+			_PART++;
+		_PART_INDEX = 0;
+
+		// Start to display the next sentence after some time
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Type, 100);
+		}, 200);
+	}
+}
+
+// Start the typing effect on load
+_INTERVAL_VAL = setInterval(Type, 100);
+
+
+/////////////  Smooth Scrolling ///////////////////
+
+$(document).ready(function() {
+  // Add smooth scrolling to all links
+  $("a").on("click", function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top
+        },
+        800,
+        function() {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        }
+      );
+    } // End if
+  });
+});
