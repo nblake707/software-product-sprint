@@ -1,178 +1,196 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css" />     
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Lora&family=Prata&display=swap" rel="stylesheet"/>    
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"/>
-  </head>
-  <body onLoad="greeting()">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Lora&family=Prata&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+</head>
+
+<body onLoad="greeting()">
     <div id="toggleIcon" onclick="menuToggle()"></div>
     <div id="menu-overlay">
-      <ul>
-        <li><a href="#hello" onclick="menuToggle()" >Home</a></li>
-        <li><a href="#about" onclick="menuToggle()">About</a></li>
-        <li><a href="#works" onclick="menuToggle()">Works</a></li>
-        <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
-      </ul>
+        <ul>
+            <li><a href="#hello" onclick="menuToggle()">Home</a></li>
+            <li><a href="#about" onclick="menuToggle()">About</a></li>
+            <li><a href="#works" onclick="menuToggle()">Works</a></li>
+            <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+        </ul>
     </div>
-    
-    <header class="row" id="hello">
-      <!-- left column -->
-      <section class="col left-col">
-        <div class="top-container">
-        <h1>hello</h1>
-        <p class="typedText">
-          I'm Nateyana and this is my personal page. 
-           <div id="type-container"><div id="type-text"></div></div>
-        </p>
-        </div>
-      </section>
 
-      <!-- right column -->
-      <section class="col right-col">
-          <div class="top-container container-fluid">
-        <img src="img/meSmall.jpg" alt="Picture of me" class="mePic" />
-        </div>
-      </section>
+    <header class="row" id="hello">
+        <!-- left column -->
+        <section class="col left-col">
+            <div class="top-container">
+                <h1>hello</h1>
+                <p class="typedText">
+                    I'm Nateyana and this is my personal page.
+                <div id="type-container">
+                    <div id="type-text"></div>
+                </div>
+                </p>
+            </div>
+        </section>
+
+        <!-- right column -->
+        <section class="col right-col">
+            <div class="top-container container-fluid">
+                <img src="img/meSmall.jpg" alt="Picture of me" class="mePic" />
+            </div>
+        </section>
     </header>
 
     <main class="container">
-      <p class="scroll" id="about">Scroll down to find out more</p>
-        
-      <section class="my-stack" id="about">
-        <h2>About Me</h2>
-        <div class="row no-row">
-          <div class="col-md-6">
-            <img src="img/correctClass.jpg" class="img-margin small-screen" />
-            <img src="img/code_tint.jpg" class="img-margin" />
-          </div>
-          <div class="col about-me">
-            <h3 class="small-screen">my <br /> story</h3>
-            <p>
-             Hello, my name is Nateyana!
-            </p>
-          </div>
-        </div>
-      </section>   
-      
-      <div id="hello-div"></div>
+        <p class="scroll" id="about">Scroll down to find out more</p>
 
-  
-      <!-- works -->
-      <section class="projects" id="works">
-        <h2>works</h2>
-
-        <div class="card-styles">
-
-          <div class="card">
-            <a href="https://github.com/nblake707/recipe-app">
-              <div class="card-image-1"></div>
-            </a>
-            <div class="card__content">
-              <p>Recipe App</p>
+        <section class="my-stack" id="about">
+            <h2>About Me</h2>
+            <div class="row no-row">
+                <div class="col-md-6">
+                    <img src="img/correctClass.jpg" class="img-margin small-screen" />
+                    <img src="img/code_tint.jpg" class="img-margin" />
+                </div>
+                <div class="col about-me">
+                    <h3 class="small-screen">my <br /> story</h3>
+                    <p>
+                        Hello, my name is Nateyana!
+                    </p>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <div class="card">
-            <a href="https://github.com/nblake707/video-search-app">
-              <div class="card-image-2"></div>
-            </a>
-            <div class="card__content">
-              <p>React Search App</p>
-            </div>
-          </div>
+        <div id="hello-div"></div>
 
-          <div class="card">
-            <a href="https://github.com/nblake707/SuperheroSightings">
-              <div class="card-image-3"></div>
-            </a>
-            <div class="card__content">
-              <p>superhero sightings</p>
-            </div>
-          </div>
 
-      </div>
+        <!-- works -->
+        <section class="projects" id="works">
+            <h2>works</h2>
 
-        <div class="card-styles">
-          <div class="card">
-            <a href="https://github.com/nblake707/VendingMachineWebApp">
-            <div class="card-image-4"></div> 
-          </a>
-            <div class="card__content">
-              <p>Vending Machine</p>
-            </div>
-          </div>
+            <div class="card-styles">
 
-          <div class="card">
-            <a href="https://github.com/nblake707/VendingMachineAjax">
-              <div class="card-image-5"></div>
-            </a>
-            <div class="card__content">
-              <p>Vending Machine Ajax</p>
-            </div>
-          </div>
+                <div class="card">
+                    <a href="https://github.com/nblake707/recipe-app">
+                        <div class="card-image-1"></div>
+                    </a>
+                    <div class="card__content">
+                        <p>Recipe App</p>
+                    </div>
+                </div>
 
-          <div class="card">
-            <a href="https://github.com/nblake707/survey-collection-app">
-              <div class="card-image-6"></div>
-           </a>
-            <div class="card__content">
-              <p>Email Survey App</p>
-            </div>
-          </div>
+                <div class="card">
+                    <a href="https://github.com/nblake707/video-search-app">
+                        <div class="card-image-2"></div>
+                    </a>
+                    <div class="card__content">
+                        <p>React Search App</p>
+                    </div>
+                </div>
 
-          </div> 
-      </section>
-
-      <!-- contact -->
-      <section class="contact" id="contact">
-        <h2>contact</h2>
-          <div class="row form_div">
-            <div class="col-sm">
-              <p>Feel free to reach out!</p>
-            </div>
-            
-            <div class="col-sm form-div">
-              <form class="form-style" action="/form-handler" method="POST">
-                <ul>
-                  <div>
-                    <li>
-                      <input type="text" id="name" name="name" class="input-style" placeholder="name">
-                    </li>
-                    <li>
-                      <input type="text" id="email" name="email" class="input-style" placeholder="email">
-                    </li>
-                    <li>
-                      <textarea type="text" id="message" name="text-input" placeholder="message"></textarea>
-                    </li>
-                    <li class="button">
-                      <button type="submit">send</button>
-                    </li>
-                  </div>
-                </ul>
-              </form>
+                <div class="card">
+                    <a href="https://github.com/nblake707/SuperheroSightings">
+                        <div class="card-image-3"></div>
+                    </a>
+                    <div class="card__content">
+                        <p>superhero sightings</p>
+                    </div>
+                </div>
 
             </div>
-      
-          </div>
-      </section>
+
+            <div class="card-styles">
+                <div class="card">
+                    <a href="https://github.com/nblake707/VendingMachineWebApp">
+                        <div class="card-image-4"></div>
+                    </a>
+                    <div class="card__content">
+                        <p>Vending Machine</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://github.com/nblake707/VendingMachineAjax">
+                        <div class="card-image-5"></div>
+                    </a>
+                    <div class="card__content">
+                        <p>Vending Machine Ajax</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://github.com/nblake707/survey-collection-app">
+                        <div class="card-image-6"></div>
+                    </a>
+                    <div class="card__content">
+                        <p>Email Survey App</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h2>contact</h2>
+            <div class="row form_div">
+                <div class="col-sm">
+                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                        <p>Type some text:</p>
+                        <textarea name="message"></textarea>
+                        <br />
+                        <p>Upload an image:</p>
+                        <input type="file" name="image">
+                        <br /><br />
+                        <button>Submit</button>
+                    </form>
+                </div>
+
+                <div class="col-sm form-div">
+                    <form class="form-style" action="/form-handler" method="POST">
+                        <ul>
+                            <div>
+                                <li>
+                                    <input type="text" id="name" name="name" class="input-style" placeholder="name">
+                                </li>
+                                <li>
+                                    <input type="text" id="email" name="email" class="input-style" placeholder="email">
+                                </li>
+                                <li>
+                                    <textarea type="text" id="message" name="text-input"
+                                        placeholder="message"></textarea>
+                                </li>
+                                <li class="button">
+                                    <button type="submit">send</button>
+                                </li>
+                            </div>
+                        </ul>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <footer>
-      <div class="container">
-        <div class="social-icons-container">
-          <a href="https://medium.com/me/stories/public" target="_blank"><img src="img/medium.svg" class="social-icon"/></a>
-          <a href="https://github.com/nblake707" target="_blank"><img src="img/github.svg" class="social-icon"/></a>
-          <a href="https://www.linkedin.com/in/nateyanablake/" target="_blank"><img src="img/linkedin.svg" class="social-icon"/></a>
-          <a href="https://open.spotify.com/user/nblake2?si=ZF3FY469SWe-4l-xjt7JEQ" target="_blank"><img src="img/spotify.svg" class="social-icon"/></a>
-      </div>
-      <p>Made with love in NYC</p>
-    </div>
+        <div class="container">
+            <div class="social-icons-container">
+                <a href="https://medium.com/me/stories/public" target="_blank"><img src="img/medium.svg"
+                        class="social-icon" /></a>
+                <a href="https://github.com/nblake707" target="_blank"><img src="img/github.svg"
+                        class="social-icon" /></a>
+                <a href="https://www.linkedin.com/in/nateyanablake/" target="_blank"><img src="img/linkedin.svg"
+                        class="social-icon" /></a>
+                <a href="https://open.spotify.com/user/nblake2?si=ZF3FY469SWe-4l-xjt7JEQ" target="_blank"><img
+                        src="img/spotify.svg" class="social-icon" /></a>
+            </div>
+            <p>Made with love in NYC</p>
+        </div>
     </footer>
 
     <!--  JS  -->
@@ -192,7 +210,7 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
-    
+
     <script>
         new kursor({
             type: 2,
@@ -201,6 +219,6 @@
         })
     </script>
 
-    </body>
+</body>
 
 </html>
